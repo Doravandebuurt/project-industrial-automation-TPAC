@@ -5,8 +5,6 @@ FLOWCHART
 ```plantuml
 @startuml
 title Linear Extrusion Process Flow
-skinparam backgroundColor transparent
-skinparam participantPadding 20
 
 participant "Extruder" as extruder
 participant "Linear Rail" as rail
