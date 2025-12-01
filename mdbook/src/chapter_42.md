@@ -1,6 +1,5 @@
 # Flowchart of the Process
 
-## Extrusion Process Flow Diagram
 
 ```plantuml
 @startuml
