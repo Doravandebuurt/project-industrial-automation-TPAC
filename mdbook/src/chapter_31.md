@@ -1,8 +1,37 @@
 # Analysis of the Process
 
+
+STATE DIAGRAM:
+
+
 ```plantuml
 @startuml
-skinparam defaultTextAlignment left
+title STATE DIAGRAM - MATERIAL
+left to right direction
+
+[*] --> STATE
+
+STATE : TEMPERATURE\nSHAPE\nAIR IN\nAT TD SYSTEM
+STATE --> OUTPUT_EXTRUDER
+
+OUTPUT_EXTRUDER : 200-400 DEGREES\nFLUFFY INCONSISTENT RECTANGULAR SHEET\nHIGH AIR IN\nHIGHEST (300-400 DEGREES)
+OUTPUT_EXTRUDER --> COMPRESSED
+
+COMPRESSED : 200-400 DEGREES\nCONSISTENT RECTANGULAR SHEET\nLOW AIR IN\nHIGH (300-400 DEGREES)
+COMPRESSED --> CONSOLIDATED
+
+CONSOLIDATED : 300-320 DEGREES\nCONSISTENT RECTANGULAR SHEET\nCOMPACT\nLOWEST (30-200 DEGREES)
+CONSOLIDATED --> [*]
+
+@enduml
+```
+
+MAIN FUNCTION OF THE PROCESS:
+
+
+```plantuml
+@startuml
+
 
 (*) --> "Main Function:
 CONTINUOUSLY SHAPE RECYCLED THERMOPLASTIC
@@ -23,8 +52,12 @@ COMPOSITE INTO SEMI-FINISHED SHEETS"
 
 ```
 
+SUBFUNCTION FOR EACH FUNCTION:
 
-CHANGE SHAPE
+
+  - CHANGE SHAPE
+
+
 ```plantuml
 @startuml
 
@@ -42,7 +75,10 @@ ChangeShape --> ChangeHeight
 
 ```
 
-MOVE SEMI FINISHED SHEET
+
+
+ - MOVE SEMI FINISHED SHEET
+
 
 ```plantuml
 @startuml
@@ -59,7 +95,9 @@ MoveSheet --> CollectSpeedInfo
 
 ```
 
-TEMPERATURE CONTROL
+
+
+ - TEMPERATURE CONTROL
 
 
 ```plantuml
@@ -76,7 +114,9 @@ TemperatureControl --> AdjustTemperature
 @enduml
 ```
 
-CONTROL SYSTEM
+
+
+ - CONTROL SYSTEM
 
 
 ``` plantuml
@@ -92,3 +132,5 @@ ControlSystem --> Safety
 ControlSystem --> AutomaticOperation
 @enduml
 ```
+
+
