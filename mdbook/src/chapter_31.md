@@ -69,17 +69,19 @@ skinparam ArrowColor white
 
 
 RECTANGLE "Change Shape" as ChangeShape
-RECTANGLE "Remove Air" as RemoveAir
+RECTANGLE "Force" as Force
 RECTANGLE "Change Width" as ChangeWidth
 RECTANGLE "Change Height" as ChangeHeight
+RECTANGLE "Force Control" as ForceControl
 
-ChangeShape --> RemoveAir
+ChangeShape --> Force
+ChangeShape --> ForceControl
 ChangeShape --> ChangeWidth
 ChangeShape --> ChangeHeight
+
 @enduml
 
 ```
-
 
 
  - MOVE SEMI FINISHED SHEET
@@ -91,7 +93,7 @@ skinparam backgroundColor transparent
 skinparam ArrowColor white
 
 
-RECTANGLE "Move-Semi-Finished-Sheet" as MoveSheet
+RECTANGLE "Move Semi Finished Sheet" as MoveSheet
 RECTANGLE ActuateMotion
 RECTANGLE SpeedControl
 RECTANGLE CollectSpeedInfo
