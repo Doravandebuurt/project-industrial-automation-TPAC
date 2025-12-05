@@ -4,43 +4,47 @@
 skinparam backgroundColor transparent
 left to right direction
 
-component box_pickup_application {
+component Interfaces_diagram {
     
     [frame]
     () placement -u- frame
-    [robot]
-    () input_0 -- robot
-    () output_0 -- robot
-    () "end\neffector" -- robot
+    [Cylinder]
+    () input_0 -- Cylinder
+    () output_0 -- Cylinder
+    () "contact\nsensor" -- Cylinder
 
     [sensor]
     sensor --> input_0 : connected
     sensor --> "sensor\nposition"
     
-    robot -> placement
+    Cylinder -> placement
 
-    [cabinet]
-    () "robot\npower" -- cabinet
-    () "conveyor\npower" -- cabinet
+    [Cylinder]
+    () "Cylinder\npower" -- room
+    () "Haul_Off\npower" -- room
    
-    cabinet -u-> placement
-    robot --> "robot\npower"
-    cabinet -r-> output_0
+    room -u-> placement
+    Cylinder --> "Cylinder\npower"
+    room -r-> output_0
     
-    [conveyor]
-    () "sensor\nposition" -- conveyor
-    () "box\nposition" -- conveyor
-    conveyor -> placement
-    conveyor --> "conveyor\npower"
+    [Haul_Off]
+    () "sensor\nposition" -- Haul_Off
+    () "Thermoplastic\nposition" -- Haul_Off
+    Haul_Off -> placement
+    Haul_Off --> "Haul_Off\npower"
 
-    [box]
-    () shape -- box
+    [Thermoplastic]
+    () shape -- Thermoplastic
     
-    [gripper]
-    gripper -l-> shape
+    [press]
+    press -l-> shape
     
-    box --> "box\nposition"
-    gripper --> "end\neffector"
+    Thermoplastic --> "Thermoplastic\nposition"
+    press --> "contact\nsensor"
+
+    [Infrared_lamp]
+    Infrared_lamp -> room
+    Thermoplastic -->Infrared_lamp
 }
 
 [building]
@@ -49,7 +53,7 @@ component box_pickup_application {
 () location -d- building
 
 frame --> location
-cabinet -r-> energy
+room -r-> energy
 
 @enduml
 ```
