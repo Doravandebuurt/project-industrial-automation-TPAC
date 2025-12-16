@@ -3,36 +3,46 @@
 @startuml ExtrusionProcess
 ' Title of the diagram
 title Extrusion and Material Processing Flow
+skinparam ArrowThickness 1.2
 
+skinparam component<<dashed>> {
+    BorderStyle dashed
+}
+skinparam component<<Solid>> {
+    BorderStyle LineThickness 4
+}
+package StartingMaterial as "Starting Material" {
+  [Thermoplastic Material]
+}
 ' Definitions of the main components
-component Extruder {
+package Extruder {
   [Hot Material]
 }
-component HaulOff as "Haul-Off System" {
+package HaulOff as "Haul-Off System" {
   [Pulling Mechanism]
 }
-component Press as "Press Machine" {
+package Press as "Press Machine"{
   [Pressing Cylinder]
   [Moving Rails]
   [Processing Area]
 
 }
 
-    component Synchronization{
+    component Synchronization <<dashed>>{
     [Speed]
     [Rail Position]
     [Cylinder]
     [Temperature Control]
 
 }
-    component Temperature_Control as "Temperature Control"{
+    package Temperature_Control as "Temperature Control"{
     [Infrared Lamp]
     [Cooling System]
 }
 
 ' Material flow and actions
 [Thermoplastic Material] -> [Hot Material] : Material Processed
-[Hot Material] --> [Pulling Mechanism] : **Is Extruded**
+[Hot Material] --> [Pulling Mechanism] : **Extruded**
 [Infrared Lamp] -up-> [Hot Material] : Keeping Temperature
 
 
@@ -70,3 +80,13 @@ end legend
 @enduml
 ```
 
+
+The synchronization is connected to all components of the machine and oversees the entire process, ensuring that all data flows through it. It controls and synchronizes every aspect of the operation.
+
+Synchronization Control:
+  - infrared lamp / cooling system
+  - cylinder action
+  - rail position and speed
+  - haul-Off speed
+  - Safety alarm
+  - emergency stop
