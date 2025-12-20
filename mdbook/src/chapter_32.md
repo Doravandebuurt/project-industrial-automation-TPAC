@@ -22,7 +22,6 @@ User -> Synchronization : Start the machine
 extruder -> Synchronization : Material speed
 Synchronization -> haul_off : Speed Synchronization
 Synchronization -> rail : Speed Synchronization
-Synchronization -> Synchronization : Wait until rail position reached
 Synchronization -> InfraredLamp : Start heating, and keep the desired position
 InfraredLamp -> Synchronization : Temperature reached
 Synchronization -> haul_off : Start pullung material
