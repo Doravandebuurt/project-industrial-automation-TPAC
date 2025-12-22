@@ -22,3 +22,11 @@ On the other hand, my teammates also brought valuable skills that I did not yet 
 Overall, the group dynamic was very positive. We worked well together, communicated clearly, and made solid agreements. No one avoided contributing to the project, which I appreciated, as this is not always the case in group work.</br>
 
 In future projects with people from different backgrounds, I will first try to determine everyone’s level of knowledge and experience with the design process. Despite our different backgrounds and skill sets, we collaborated effectively and successfully developed a final design together.</br>
+
+
+# Michele 
+As you know, I started this minor without any prior experience in project work or mechanical design. However, through this project I feel that I learned a great deal, such as teamwork, organization, design and concept selection, thermoplastic materials, the morphological table, Kesselring graduation, the importance of constant progress, and especially how to approach a project like this from the very beginning in order to reassure the customer and make the concept as clear and solid as possible.</br>
+
+I tried to put in as much effort as possible and to help wherever I could. I truly wanted to actively contribute to this project, even though I know that my contribution was less technical than that of my teammates. I had some difficulties with the language and communication, but I believe I did a good job, and my teammates helped me a lot throughout the process.</br>
+
+Overall, this experience was very positive and valuable for me. It helped me improve my skills, and gain more confidence in working on projects and collaborating in a team, while also giving me a better understanding of how real design projects are developed in a professional environment.</br>
