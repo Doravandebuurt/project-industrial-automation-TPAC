@@ -1,4 +1,4 @@
-# Risk assessment
+# Risk asSessment
 
 First, some definitions will be discussed out of Dutch safety Norm "NEN-EN-ISO 13849-1:2023 Veiligheid van machines - Onderdelen van besturingssystemen met een veiligheidsfunctie" regarding hazard, harm and risks.</br>
 
@@ -51,5 +51,5 @@ After the final design was chosen, the limits of the machine where summed up in 
 
 ![Risk analysis and evaluation](./risk_analysis.png)
 
-### Risk Assesment
+### Risk AsseSsment
 Every risk can be reduced to an acceptable risk with the proposed measures, except for risk #4, rails reachable by hand. This hazard could be removed by placing an additional case around the railing system or a fance around the entire machine. However, this is not taken into account in the design.
