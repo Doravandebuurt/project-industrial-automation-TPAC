@@ -49,4 +49,5 @@ After the final design was chosen, the limits of the machine where summed up in 
 16–20: Very high risk, immediate action required</br>
 21–25: Critical risk, stop immediately and implement solution</br>
 
-![Risk analysis& evaluation](./risk_analysis_.png)
+![Risk analysis and evaluation](./risk_analysis_.png)
+
